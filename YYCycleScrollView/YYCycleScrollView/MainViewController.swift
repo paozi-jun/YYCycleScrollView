@@ -1,10 +1,4 @@
-//
-//  MainViewController.swift
-//  YYCycleScrollView
-//
-//  Created by 向文品 on 14-7-3.
-//  Copyright (c) 2014年 向文品. All rights reserved.
-//
+
 
 import UIKit
 
@@ -17,8 +11,27 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var viewsArray = NSMutableArray()
+        var colorArray = [UIColor.cyanColor(),UIColor.blueColor(),UIColor.greenColor(),UIColor.yellowColor(),UIColor.purpleColor()]
+        for  i in 0..5 {
+            var tempLabel = UILabel(frame:CGRectMake(0, 0, 320, 300))
+            tempLabel.backgroundColor = colorArray[i] as UIColor
+            viewsArray.addObject(tempLabel)
+        }
+        
+        var mainScorllView = YYCycleScrollView(frame:CGRectMake(0, 100, 320, 300),animationDuration:2.0)
+        mainScorllView.backgroundColor = UIColor.purpleColor()
+        mainScorllView.fetchContentViewAtIndex = {(pageIndex:Int)->UIView in
+            return viewsArray.objectAtIndex(pageIndex) as UIView
+        }
 
-        // Do any additional setup after loading the view.
+        mainScorllView.totalPagesCount = {()->Int in
+            return 5;
+        }
+        mainScorllView.TapActionBlock = {(pageIndex:Int)->() in
+            println("点击了\(pageIndex)")
+        }
+        self.view.addSubview(mainScorllView)
     }
 
     override func didReceiveMemoryWarning() {

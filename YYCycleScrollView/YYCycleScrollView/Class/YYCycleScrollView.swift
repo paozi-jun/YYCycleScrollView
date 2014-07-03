@@ -15,7 +15,7 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     }
     }
     
-    var fetchContentViewAtIndex:((Int)->UIView)!
+    var fetchContentViewAtIndex:((pageIndex:Int)->UIView)!
     
     var TapActionBlock:((pageIndex:Int)->())!
     
@@ -31,8 +31,8 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     init(frame:CGRect,animationDuration:NSTimeInterval){
         super.init(frame: frame)
         if animationDuration>0.0 {
-            self.animationTimer = NSTimer.scheduledTimerWithTimeInterval(self.animationDuration, target: self, selector: "animationTimerDidFired:", userInfo: nil, repeats: true)
-            self.animationTimer.pauseTimer()
+//            self.animationTimer = NSTimer.scheduledTimerWithTimeInterval(self.animationDuration, target: self, selector: "animationTimerDidFired:", userInfo: nil, repeats: true)
+//            self.animationTimer.pauseTimer()
         }
         
         self.autoresizesSubviews = true
@@ -80,9 +80,9 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
         self.contentViews.removeAllObjects()
         
         if self.fetchContentViewAtIndex {
-            self.contentViews.addObject(self.fetchContentViewAtIndex(previousPageIndex))
-            self.contentViews.addObject(self.fetchContentViewAtIndex(self.currentPageIndex))
-            self.contentViews.addObject(self.fetchContentViewAtIndex(rearPageIndex))
+            self.contentViews.addObject(self.fetchContentViewAtIndex(pageIndex: previousPageIndex))
+            self.contentViews.addObject(self.fetchContentViewAtIndex(pageIndex: self.currentPageIndex))
+            self.contentViews.addObject(self.fetchContentViewAtIndex(pageIndex:rearPageIndex))
         }
     }
     
@@ -97,11 +97,15 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView!){
-        self.animationTimer.pauseTimer()
+        if  self.animationTimer{
+            self.animationTimer.pauseTimer()
+        }
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView!, willDecelerate decelerate: Bool){
-        self.animationTimer.resumeTimerAfterTimeInterval(self.animationDuration)
+        if  self.animationTimer{
+            self.animationTimer.resumeTimerAfterTimeInterval(self.animationDuration)
+        }
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView!){
