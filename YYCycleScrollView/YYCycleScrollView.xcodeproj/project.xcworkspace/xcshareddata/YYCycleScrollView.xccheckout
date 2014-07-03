@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>05589E72-C013-4DAF-8D3D-2DA5632366FB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YYCycleScrollView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C2C86839-75A3-4616-B895-1A88B5B2B38D</key>
+		<string>https://github.com/paozi-jun/YYCycleScrollView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YYCycleScrollView/YYCycleScrollView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C2C86839-75A3-4616-B895-1A88B5B2B38D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/paozi-jun/YYCycleScrollView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C2C86839-75A3-4616-B895-1A88B5B2B38D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C2C86839-75A3-4616-B895-1A88B5B2B38D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YYCycleScrollView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
