@@ -19,7 +19,15 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     
     var TapActionBlock:((pageIndex:Int)->())!
     
-    var currentPageIndex:Int!
+    var _currentPageIndex:Int!
+    var currentPageIndex:Int!{
+    set{
+        self._currentPageIndex = newValue
+    }
+    get{
+        return self._currentPageIndex
+    }
+    }
     
     var totalPageCount:Int!
     var contentViews:NSMutableArray!
@@ -31,8 +39,7 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     init(frame:CGRect,animationDuration:NSTimeInterval){
         super.init(frame: frame)
         if animationDuration>0.0 {
-//            self.animationTimer = NSTimer.scheduledTimerWithTimeInterval(self.animationDuration, target: self, selector: "animationTimerDidFired:", userInfo: nil, repeats: true)
-//            self.animationTimer.pauseTimer()
+            self.animationTimer = NSTimer.scheduledTimerWithTimeInterval(animationDuration, target: self, selector: Selector("animationTimerDidFired:"), userInfo: nil, repeats: true)
         }
         
         self.autoresizesSubviews = true
@@ -93,18 +100,6 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
             return 0
         }else {
             return currentPageIndex
-        }
-    }
-    
-    func scrollViewWillBeginDragging(scrollView: UIScrollView!){
-        if  self.animationTimer{
-            self.animationTimer.pauseTimer()
-        }
-    }
-    
-    func scrollViewDidEndDragging(scrollView: UIScrollView!, willDecelerate decelerate: Bool){
-        if  self.animationTimer{
-            self.animationTimer.resumeTimerAfterTimeInterval(self.animationDuration)
         }
     }
     

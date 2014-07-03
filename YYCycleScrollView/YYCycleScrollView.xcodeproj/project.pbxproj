@@ -12,7 +12,6 @@
 		8FBBDC221965494C00274301 /* YYCycleScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC211965494C00274301 /* YYCycleScrollViewTests.swift */; };
 		8FBBDC2C1965495D00274301 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC2B1965495D00274301 /* MainViewController.swift */; };
 		8FBBDC2F19654BAE00274301 /* YYCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC2E19654BAE00274301 /* YYCycleScrollView.swift */; };
-		8FBBDC3319654F1C00274301 /* NSTimer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC3219654F1C00274301 /* NSTimer+Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		8FBBDC211965494C00274301 /* YYCycleScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYCycleScrollViewTests.swift; sourceTree = "<group>"; };
 		8FBBDC2B1965495D00274301 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8FBBDC2E19654BAE00274301 /* YYCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCycleScrollView.swift; sourceTree = "<group>"; };
-		8FBBDC3219654F1C00274301 /* NSTimer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Addition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				8FBBDC2E19654BAE00274301 /* YYCycleScrollView.swift */,
-				8FBBDC3219654F1C00274301 /* NSTimer+Addition.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -219,7 +216,6 @@
 			files = (
 				8FBBDC141965494C00274301 /* AppDelegate.swift in Sources */,
 				8FBBDC2C1965495D00274301 /* MainViewController.swift in Sources */,
-				8FBBDC3319654F1C00274301 /* NSTimer+Addition.swift in Sources */,
 				8FBBDC2F19654BAE00274301 /* YYCycleScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
