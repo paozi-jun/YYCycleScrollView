@@ -9,6 +9,8 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     set{
         self._totalPagesCount = newValue
         self.totalPageCount = _totalPagesCount()
+        self.pageControl.numberOfPages = newValue()
+        self.configContentViews()
     }
     get{
         return self._totalPagesCount
@@ -23,6 +25,9 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     var currentPageIndex:Int!{
     set{
         self._currentPageIndex = newValue
+        if self.pageControl{
+            self.pageControl.currentPage = newValue
+        }
     }
     get{
         return self._currentPageIndex
@@ -34,6 +39,18 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
     var animationTimer:NSTimer!
     var animationDuration:NSTimeInterval!
     
+    var _showPageControl:Bool!
+    var showPageControl:Bool!{
+    set{
+        self._showPageControl = newValue
+        self.pageControl.hidden = !newValue
+    }
+    get{
+        return self._showPageControl
+    }
+    }
+    
+    var pageControl:UIPageControl!
     var scrollView:UIScrollView!
     
     init(frame:CGRect,animationDuration:NSTimeInterval){
@@ -52,6 +69,12 @@ class YYCycleScrollView: UIView,UIScrollViewDelegate {
         self.scrollView.pagingEnabled = true
         self.addSubview(self.scrollView)
         self.currentPageIndex = 0
+        
+        self.pageControl = UIPageControl()
+        self.pageControl.center = CGPointMake(frame.size.width/2,frame.size.height-25)
+        self.addSubview(pageControl)
+        
+        self.showPageControl = true
     }
     
     init(frame: CGRect) {

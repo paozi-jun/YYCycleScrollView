@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8F9D468019662B520096BC43 /* NSTimer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D467F19662B520096BC43 /* NSTimer+Addition.swift */; };
+		8F9D469219662ECB0096BC43 /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D468D19662ECB0096BC43 /* 0.jpeg */; };
+		8F9D469319662ECB0096BC43 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D468E19662ECB0096BC43 /* 1.jpeg */; };
+		8F9D469419662ECB0096BC43 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D468F19662ECB0096BC43 /* 2.jpeg */; };
+		8F9D469519662ECB0096BC43 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D469019662ECB0096BC43 /* 3.jpeg */; };
+		8F9D469619662ECB0096BC43 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D469119662ECB0096BC43 /* 4.jpeg */; };
 		8FBBDC141965494C00274301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC131965494C00274301 /* AppDelegate.swift */; };
 		8FBBDC161965494C00274301 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBDC151965494C00274301 /* Images.xcassets */; };
 		8FBBDC221965494C00274301 /* YYCycleScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBDC211965494C00274301 /* YYCycleScrollViewTests.swift */; };
@@ -27,6 +32,11 @@
 
 /* Begin PBXFileReference section */
 		8F9D467F19662B520096BC43 /* NSTimer+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Addition.swift"; sourceTree = "<group>"; };
+		8F9D468D19662ECB0096BC43 /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
+		8F9D468E19662ECB0096BC43 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		8F9D468F19662ECB0096BC43 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		8F9D469019662ECB0096BC43 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		8F9D469119662ECB0096BC43 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
 		8FBBDC0E1965494C00274301 /* YYCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBBDC121965494C00274301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBBDC131965494C00274301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F9D468C19662ECB0096BC43 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				8F9D468D19662ECB0096BC43 /* 0.jpeg */,
+				8F9D468E19662ECB0096BC43 /* 1.jpeg */,
+				8F9D468F19662ECB0096BC43 /* 2.jpeg */,
+				8F9D469019662ECB0096BC43 /* 3.jpeg */,
+				8F9D469119662ECB0096BC43 /* 4.jpeg */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		8FBBDC051965494B00274301 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +99,7 @@
 		8FBBDC101965494C00274301 /* YYCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				8F9D468C19662ECB0096BC43 /* image */,
 				8FBBDC2D19654A6E00274301 /* Class */,
 				8FBBDC131965494C00274301 /* AppDelegate.swift */,
 				8FBBDC2B1965495D00274301 /* MainViewController.swift */,
@@ -199,6 +222,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9D469519662ECB0096BC43 /* 3.jpeg in Resources */,
+				8F9D469419662ECB0096BC43 /* 2.jpeg in Resources */,
+				8F9D469219662ECB0096BC43 /* 0.jpeg in Resources */,
+				8F9D469319662ECB0096BC43 /* 1.jpeg in Resources */,
+				8F9D469619662ECB0096BC43 /* 4.jpeg in Resources */,
 				8FBBDC161965494C00274301 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

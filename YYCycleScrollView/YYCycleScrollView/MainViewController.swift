@@ -14,13 +14,15 @@ class MainViewController: UIViewController {
         var viewsArray = NSMutableArray()
         var colorArray = [UIColor.cyanColor(),UIColor.blueColor(),UIColor.greenColor(),UIColor.yellowColor(),UIColor.purpleColor()]
         for  i in 0..5 {
-            var tempLabel = UILabel(frame:CGRectMake(0, 0, 320, 300))
-            tempLabel.backgroundColor = colorArray[i] as UIColor
-            viewsArray.addObject(tempLabel)
+            var tempImgaeView = UIImageView(frame:CGRectMake(0, 0, 320, 300))
+            tempImgaeView.image = UIImage(named:"\(i).jpeg")
+            tempImgaeView.contentMode = UIViewContentMode.ScaleAspectFill
+            tempImgaeView.clipsToBounds = true
+            viewsArray.addObject(tempImgaeView)
         }
         
         var mainScorllView = YYCycleScrollView(frame:CGRectMake(0, 100, 320, 300),animationDuration:2.0)
-        mainScorllView.backgroundColor = UIColor.purpleColor()
+        //mainScorllView.backgroundColor = UIColor.purpleColor()
         mainScorllView.fetchContentViewAtIndex = {(pageIndex:Int)->UIView in
             return viewsArray.objectAtIndex(pageIndex) as UIView
         }
